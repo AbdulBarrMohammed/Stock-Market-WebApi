@@ -8,6 +8,7 @@ using api.Helpers;
 using api.Interfaces;
 using api.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 
 //This repository is used for database calls
 
@@ -38,8 +39,10 @@ namespace api.Repository
 
                 }
             }
+            // Pagination
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
 
-            return await stocks.ToListAsync();
+            return await stocks.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
         public async Task<Stock> CreateAsync(Stock stockModel) {
