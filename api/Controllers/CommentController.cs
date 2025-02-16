@@ -25,6 +25,7 @@ namespace api.Controllers{
         [HttpGet]
         public async Task<IActionResult> GetAll() {
 
+            //Tells dotnet to perform validation
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -38,7 +39,7 @@ namespace api.Controllers{
         public async Task<IActionResult> GetById([FromRoute] int id) {
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
-                
+
             var comment = await _commentRepo.GetByIdAsync(id);
 
             if (comment == null) {
