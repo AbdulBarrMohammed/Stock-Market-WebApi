@@ -171,3 +171,9 @@
 /Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Newtonsoft.Json.dll
 /Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Newtonsoft.Json.Bson.dll
+/Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Microsoft.Extensions.Identity.Core.dll
+/Users/barrmohammed/Desktop/stockMarketWebAPI/api/bin/Debug/net9.0/Microsoft.Extensions.Identity.Stores.dll

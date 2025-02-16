@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using api.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 
 namespace api.Data
 {
-    public class ApplicationDBContext : DbContext  // inherit from DbContext
+    public class ApplicationDBContext : IdentityDbContext<AppUser>  // inherit from DbContext
     {
         public ApplicationDBContext(DbContextOptions options)
             : base(options)
