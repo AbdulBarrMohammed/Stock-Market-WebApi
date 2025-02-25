@@ -95,5 +95,10 @@ namespace api.Repository
         {
             return _context.Stocks.AnyAsync(s => s.Id == id);
         }
+
+        public Task<Stock?> GetBySymbolAsync(string symbol)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
