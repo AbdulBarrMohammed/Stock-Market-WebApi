@@ -55,6 +55,14 @@ namespace api.Controllers
                 StockId = stock.Id,
                 AppUserId = appUser.Id
             };
+
+            await _portfolioRepo.CreateAsync(portfolioModel);
+            if (portfolioModel == null) {
+                return StatusCode(500, "Could not create");
+            }
+            else {
+                return Created();
+            }
         }
     }
 }
