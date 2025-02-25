@@ -76,8 +76,13 @@ namespace api.Controllers
             var filteredStock = userPortfolio.Where(s => s.Symbol.ToLower() == symbol.ToLower()).ToList();
 
             if (filteredStock.Count() == 1) {
-                await _portfolioRepo.delet
+                await _portfolioRepo.DeletePortfolio(appUser, symbol);
             }
+            else {
+                return BadRequest("Stock is not in your portfolio");
+            }
+
+            return Ok();
         }
     }
 }
