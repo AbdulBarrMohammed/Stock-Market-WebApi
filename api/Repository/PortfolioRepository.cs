@@ -25,6 +25,11 @@ namespace api.Repository
             return portfolio;
         }
 
+        public Task<Portfolio> DeletePortfolio(AppUser appUser, string symbol)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<Stock>> GetUserPortfolio(AppUser user)
         {
             return await _context.Portfolios.Where(u => u.AppUserId == user.Id)
