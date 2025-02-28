@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using api.Dtos.Comment;
 using Microsoft.AspNetCore.Identity;
 using api.Models;
+using api.Extensions;
 
 
 namespace api.Controllers{
@@ -63,6 +64,9 @@ namespace api.Controllers{
 
                 return BadRequest("Stock does not exist");
             }
+
+            var username = User.GetUsername();
+            var appUser = await _userManager.FindByNameAsync(username);
 
             var commentModel = commentDto.ToCommentFromCreate(stockId);
             await _commentRepo.CreateAsync(commentModel);
