@@ -7,6 +7,8 @@ using api.Interfaces;
 using api.Mappers;
 using Microsoft.AspNetCore.Mvc;
 using api.Dtos.Comment;
+using Microsoft.AspNetCore.Identity;
+using api.Models;
 
 
 namespace api.Controllers{
@@ -17,9 +19,12 @@ namespace api.Controllers{
         private readonly ICommentRepository _commentRepo;
         private readonly IStockRepository _stockRepo;
 
-        public CommentController(ICommentRepository commentRepo, IStockRepository stockrepo) {
+        private readonly UserManager<AppUser> _userManager;
+
+        public CommentController(ICommentRepository commentRepo, IStockRepository stockrepo, UserManager<AppUser> userManager) {
             _commentRepo = commentRepo;
             _stockRepo = stockrepo;
+            _userManager = userManager;
         }
 
         [HttpGet]
